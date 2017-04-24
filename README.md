@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# iteration-1
+
 # ExploreVIC
-=======
-# ExploreVIC
-This is iteration 1 of  FIT5120 Industry Experience at Monash University which is completed by Team Kangaruz.
-The team member is Kai, Kris, Tobi and Irene.
->>>>>>> 63bd8e640a853a8913e740a656a28e4a6ce083d4
+This is iteration 2 of  FIT5120 Industry Experience at Monash University which is completed by Team Kangaruz.
+The team member are Kai, Kris, Tobi and Irene.
+
+# Acknowledgement
+The development cannot be completed without the help from Bill and Harnam. In addition, there are some libraries are used during the development, they are:
