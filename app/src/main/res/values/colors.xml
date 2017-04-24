@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#77c7f2</color> <!--3f51b5-->
+    <color name="colorPrimaryDark">#965f9ed9</color>
+    <color name="colorAccent">#77c7f2</color> <!--check box-->
+    <color name="white">#ffffff</color>
+    <color name="selectable_pressed">#96cecdfa</color>
+
+    <color name="trans_black_25">#40000000</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="third_text_tran_170">#aa494949</color>
+    <color name="chrome_grey">#F2F2F2</color>
+    <color name="button_background_tran150">#96d1f0ff</color><!--#96edf9ff-->
+    <color name="button_background">#edf9ff</color>
+    <color name="small_label_background_trans_50">#7dffffff</color>
+    <color name="small_label_background_trans_25">#b4ffffff</color>
+
+    <color name="red_light">#FADBD8</color>
+    <color name="green_light">#D1F2EB</color>
+    <color name="orange_light">#FAE5D3</color>
+    <color name="sky_blue_light">#c8d5edff</color>
+    <color name="purple_light">#E8DAEF</color>
+    <color name="yellow_light">#FCF3CF</color>
+
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="yellow">#ffdd00</color>
+</resources>

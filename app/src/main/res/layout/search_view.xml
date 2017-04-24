@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_toolbar_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans_black_25"
+    android:orientation="vertical"
+    android:paddingTop="18dp">
+
+    <include layout="@layout/include_toolbar_search"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/list_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:divider="@android:color/transparent"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary_text"
+                android:background="@color/white"
+                android:padding="20dp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <!--
+            <ListView
+                android:id="@+id/list_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="vertical"
+                android:divider="@android:color/transparent"
+                android:visibility="gone"/>
+                -->
+
+            <Button
+            android:id="@+id/button_clear_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_background"
+            android:text="Clear search history"
+            android:visibility="gone"
+            />
+
+            <LinearLayout
+                android:id="@+id/layout_filter_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:background="@color/white">
+
+                <CheckBox
+                    android:id="@+id/checkBox_Air"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="Air"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/secondary_text"
+                    android:checked="true"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBox_Land"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="Land"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/secondary_text"
+                    android:checked="true"
+                    />
+                <CheckBox
+                    android:id="@+id/checkBox_Sea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="Sea"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/secondary_text"
+                    android:checked="true"
+                    />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner_region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@color/secondary_text"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:spinnerMode="dropdown"
+                android:overScrollMode="ifContentScrolls"
+                />
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
