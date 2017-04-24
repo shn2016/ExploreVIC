@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_icon"
+        android:title="Search"
+        compat:showAsAction="always"/>
+    <item
+        android:id="@+id/action_add_favourite"
+        android:icon="@drawable/camera_icon"
+        android:title="Add"
+        compat:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jzha442.explorevic.screen.MainActivity"
+    android:id="@+id/nearyby_fragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type your destination here"
+            android:inputType="textMultiLine"
+            android:gravity="center"
+            app:pacv_googleMapsApiKey="@string/google_maps_key"
+            app:pacv_languageCode="en"
+            app:pacv_adapterClass="jzha442.explorevic.adapter.PlacesAutocompleteAdapter"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:padding="2dp"
+            />
+
+        <Button
+            android:id="@+id/address_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Save Destination"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/button_background"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:fadingEdge="horizontal"
+        android:layout_margin="2dp"
+        android:fadingEdgeLength="20dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/loading_direction">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorName="BallScaleRippleMultipleIndicator"
+            app:indicatorColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/location_mark"
+        app:backgroundTint="@color/white"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/toilet_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="85dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/toilets"
+        android:visibility="gone"
+        app:backgroundTint="@color/white"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/parking_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="135dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/carpark"
+        app:backgroundTint="@color/white"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="185dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/activity_icon"
+        app:backgroundTint="@color/white"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/canoeingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/canoeing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/canoeing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mountain_bikingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="85dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/mountain_biking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/mountain_biking" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sailingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="135dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/sailing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/skydivingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="185dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/skydiving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/skydiving" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/snorkellingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="235dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/snorkelling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/snorkelling" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/surfingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="285dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/surfing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/surfing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/campingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="435dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/camping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/camping" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ballooningLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="335dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/ballooning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/ballooning" />
+
+        <TextView
+            android:id="@+id/ballooningLayout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/swimmingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="385dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/swimming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/swimming" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/route_fab"
+        android:layout_gravity="top|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:backgroundTint="@color/white"
+        app:srcCompat="@drawable/route_icon" />
+
+</FrameLayout>

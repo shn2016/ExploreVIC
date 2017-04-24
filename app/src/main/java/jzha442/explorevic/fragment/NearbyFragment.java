@@ -479,7 +479,7 @@ public class NearbyFragment extends BaseFragment implements OnMapReadyCallback,
                 isLoading(true);
                 NearbyActivityService n = new NearbyActivityService(mActivity);
                 final List<HashMap<String, String>> ll = new ArrayList<HashMap<String, String>>();
-                if (pointList.size() != 0) {
+                if (pointList.size() == 0) {
                     NearbyActivityService.placeIdTask asyncTask = new NearbyActivityService.placeIdTask(
                             new NearbyActivityService.AsyncResponse() {
                                 public void processFinish(List<HashMap<String, String>> np) {
@@ -512,7 +512,7 @@ public class NearbyFragment extends BaseFragment implements OnMapReadyCallback,
                                 ShowNearbyActivities(ll);
                             }
                         });
-                        gasyncTask.execute(latitude + "", longitude + "");
+                        gasyncTask.execute(lat + "", lon + "");
                     }
 
                 }
