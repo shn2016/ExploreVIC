@@ -1,8 +1,38 @@
 
-# ExploreVIC
+# Kangaruz – Explore VIC – Aconex
+
 This is iteration 2 of  FIT5120 Industry Experience at Monash University which is completed by Team Kangaruz.
 The team member are Kai, Kris, Tobi and Irene.
 
+Check [here](https://mahara.infotech.monash.edu.au/mahara/view/view.php?t=FpQrua1SktZODMxvfEge) for more details.
+
+# Introduction
+
+Blue - into the blue
+
+ExploreVic is an outdoor activity application providing the most comprehensive information of amazing water sports and adventure activities on mountain or air which provided inside Victoria borders.
+
+# Main Features
+1. Search activities by specific regions
+
+2. Find nearest locations provides the particular activities or sports
+
+3. Design personal traveling schedule and favorite list
+
+4. Recommend user whether the weather is not good and it is dangerous to enjoy those activities.
+
+# Explore Vic Ad video
+
+Check [youtube video](https://youtu.be/dTkcI2mdlI8) .
+
+# User Instruction
+
+Check [youtube video](https://youtu.be/Ko3uKH162s8) .
+
+# Learning Journey
+
+check [youtube video](https://youtu.be/F0cYQzP6XC0)
+.
 # Code acknowledgement 
 
 The development cannot be completed without the help from Bill and Harnam. In addition, there are some libraries are used during the development, they are:
